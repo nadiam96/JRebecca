@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+    <head>
+        <meta charset="utf-8" />
+        <title>Apache Wicket Quickstart</title>
+        <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <br>
+        <div style="display: flex; flex-direction: row; justify-content: center">
+            <h3 style="color: #214373">Rebeca Modeling Language</h3>
+        </div>
+        <br>
+        <div style="display: flex; flex-direction: row; justify-content: center">
+            <h4 style="color: #214373">Java State Space Generator</h4>
+        </div>
+        <br>
+        <form wicket:id="form">
+            <div wicket:id="upload"></div>
+            <wicket:enclosure child="start">
+                <div style="display: flex; flex-direction: row; margin-top: 1vh; justify-content: center">
+                    <span class="control-label" style="left: auto">Depth: </span>
+                    <input type="text" class="form-control" style="margin-right: 1vw; margin-left: 1vw; width: 7vw" wicket:id="depth"/>
+                    <button style="margin-right: 1vw" class="btn btn-primary" wicket:id="start">Generate State Space</button>
+                    <button style="margin-right: 1vw" class="btn btn-primary" wicket:id="next">next</button>
+                    <button style="margin-right: 1vw" class="btn btn-primary" wicket:id="fast-forward">fast forward</button>
+                    <a wicket:id="downloadLink">Download Sources</a>
+                </div>
+                <br>
+                <br>
+                <div wicket:id="graph"></div>
+            </wicket:enclosure>
+        </form>
+    </body>
+</html>
